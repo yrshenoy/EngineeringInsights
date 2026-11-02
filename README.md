@@ -12,8 +12,6 @@
 
 The recording walks through the dashboard, employee-specific views, fiscal-year contributions, click-through record lists, and the reflection message that motivated the project.
 
-> The video file must be uploaded separately to `docs/demo/` for this link to work. The GitHub text connection cannot directly transfer the MP4 from this chat.
-
 ## Why I built it
 
 Engineering contributions are spread across several systems. During reviews and career-development conversations, it can be difficult for engineers to remember their work across an entire fiscal year—especially investigations, technical spikes, code reviews, and customer support work that may not be highly visible.
