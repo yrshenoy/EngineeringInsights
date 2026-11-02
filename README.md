@@ -12,6 +12,12 @@
 
 The recording walks through the dashboard, employee-specific views, fiscal-year contributions, click-through record lists, and the reflection message that motivated the project.
 
+## Application preview
+
+The dashboard below shows **Diego Messi**, a fictional employee, viewing his FY26 contributions. Employees can review only their own records, explore the work behind each activity count, and reflect on the contributions those counts cannot capture.
+
+![Engineering Insights — personal contribution dashboard with Beyond the Metrics reflection](docs/images/engineering-insights-dashboard.png)
+
 ## Why I built it
 
 Engineering contributions are spread across several systems. During reviews and career-development conversations, it can be difficult for engineers to remember their work across an entire fiscal year—especially investigations, technical spikes, code reviews, and customer support work that may not be highly visible.
