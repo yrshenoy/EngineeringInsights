@@ -47,7 +47,7 @@ The local demonstration uses fictional employees with intentionally different ar
 | **Maria Graf** | UPS and FedEx shipping implementations, defect resolution |
 | **Roger Nadal** | AI agents and agentic warehouse workflows |
 
-Each employee can access **only their own** contribution records. The demo includes fiscal-year selection, summary metrics, and clickable totals that open the complete corresponding records in a panel below. The public example uses mock records, not live Jira/GitLab links.
+Each employee can access **only their own** contribution records. The demo includes fiscal-year selection, summary metrics, and clickable totals that open the complete corresponding record list. The public example uses mock records, not live Jira/GitLab links.
 
 ### Employee privacy
 
@@ -64,13 +64,54 @@ Each employee can access **only their own** contribution records. The demo inclu
 4. **Human judgment over scoring:** Use qualitative discussion to capture leadership, mentorship, cross-team work, technical complexity, and context.
 5. **Privacy by design:** Employees see their own records; use fictional data in public demonstrations.
 
-## Project status
+## Run the independent local demo
 
-This repository is the public documentation home for the **Engineering Insights — Beyond the Metrics** case study. The independent local demo source and recording can be added under the folders listed below. They are not substitutes for or copies of the original internal implementation.
+The application uses **Python 3.10 or later** and only the Python standard library. It binds to `127.0.0.1` and should **not** be exposed to the public internet.
 
-- [Demo files](docs/demo/)
+From the repository root:
+
+```powershell
+python server.py
+```
+
+If Windows has the Python launcher instead, use `py server.py`.
+
+Open **http://127.0.0.1:8765/login** and choose one of the four fictional employees. The local demonstration password is `demo123` (not a production credential).
+
+- Select **FY24**, **FY25**, **FY26**, or illustrative **FY27**.
+- Click any metric card to see its full corresponding fictional record list.
+- Search records, inspect individual items, and export employee-scoped CSV.
+- Sign out and switch fictional employees to compare how their roles produce different kinds of work—not to rank performance.
+
+### Synthetic records
+
+The deterministic [data generator](generate_data.py) generates the fictional contribution set in memory when the application starts; no external APIs, credentials, or internal systems are involved. To also write the generated JSON data locally, run:
+
+```powershell
+python generate_data.py
+```
+
+The resulting `synthetic_data.json` is ignored by Git because it is reproducible from source.
+
+### Tests
+
+```powershell
+python -m unittest discover -s tests -v
+```
+
+Tests exercise four-person fiscal-year coverage, metric reconciliation, fictional contribution patterns, authentication redirects, employee record isolation, and owner-restricted CSV exports.
+
+## Repository contents
+
+- [`server.py`](server.py) — local HTTP application, session handling and server-side owner filtering
+- [`generate_data.py`](generate_data.py) — deterministic FY24–FY27 synthetic record generator
+- [`assets/style.css`](assets/style.css) — responsive dashboard styles
+- [`tests/`](tests/) — data integrity and access-control tests
+- [Demo video](docs/demo/) — narrated Engineering Insights walkthrough
 - [Architecture and access principles](docs/architecture.md)
 - [Public portfolio disclaimer](NOTICE.md)
+
+**Scope:** This is an independent local prototype, not the original employer-owned system. The example shared-password login is for a controlled demo and is not production-grade authentication.
 
 ## Other engineering leadership projects
 
