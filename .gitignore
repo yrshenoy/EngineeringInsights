@@ -1,0 +1,9 @@
+# Generated deterministic synthetic data; run python generate_data.py if needed
+synthetic_data.json
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+.DS_Store
+.env
