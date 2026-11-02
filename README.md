@@ -8,7 +8,7 @@
 
 **Engineering Insights — Beyond the Metrics | Engineering Leadership & Employee Development Demo**
 
-[**Watch the Engineering Insights video demo (MP4)**](docs/demo/EngineeringInsights-Beyond-the-Metrics-No-Zoom-Tile.mp4)
+[**Watch the Engineering Insights video demo (MP4)**](docs/demo/EngineeringInsights-Beyond-the-Metrics-Demo.mp4)
 
 The recording walks through the dashboard, employee-specific views, fiscal-year contributions, click-through record lists, and the reflection message that motivated the project.
 
