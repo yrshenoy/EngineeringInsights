@@ -10,4 +10,3 @@ The recording shows an independently created dashboard with fictional employees 
 
 The original internal dashboard and integrations are **not** included in this repository.
 
-**Upload note:** The video is a separate binary upload and is not included in this documentation commit. Upload the MP4 to this folder with the exact filename above so the links work.
